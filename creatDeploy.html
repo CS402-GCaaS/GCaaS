@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"> <!-- For display webpage is correct -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Protect IE display error -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- In case of different screen will be display suitable -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Create Deployment</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> GCaaS
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-default btn-lg" style="font-size:14px;" href="login.html">Log in</a><br>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <h1>Create Deployment</h1>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="deployName" class="col-sm-2 control-label">Deployment Name : </label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="deployName" type="text" placeholder="Please input here...">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="url" class="col-sm-2 control-label">URL : </label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="url" type="text" placeholder="http:// ..." disabled>
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="typeDeploy" class="col-sm-2 control-label">Type of Deployment :</label>
+                            <div class="col-sm-10" id="typeDeploy">
+                                <select id="select" class="form-control">
+                                        <option>Please select type of deployment...</option>
+                                        <option>Human</option>
+                                        <option>Water</option>
+                                        <option>Fire</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Description : </label>
+                        <div class="col-sm-10">
+                            <!--<input class="form-control" id="description" type="text" >-->
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+
+                    <!--<label class="col-sm-2 control-label">Configuration :</label>-->
+                    <div class="form-group">
+                        <label for="area" class="col-sm-2 control-label">Area of deployment : </label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="area" type="text">
+                        </div>
+                    </div>
+
+                    Map Section
+                    <!--<div id="map"></div>-->
+
+
+                    <div class="form-group">
+                        <label for="area" class="col-sm-2 control-label">Static data layer : </label>
+                        <div class="col-sm-10">
+                            <form role="form">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">hospital</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">school</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">police station</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--<div class="form-group has-success has-feedback">-->
+                        <!--<label class="col-sm-2 control-label" for="inputSuccess">Input with success and glyphicon</label>-->
+                        <!--<div class="col-sm-10">-->
+                            <!--<input type="text" class="form-control" id="inputSuccess">-->
+                            <!--<span class="glyphicon glyphicon-ok form-control-feedback"></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group has-warning has-feedback">-->
+                        <!--<label class="col-sm-2 control-label" for="inputWarning">Input with warning and glyphicon</label>-->
+                        <!--<div class="col-sm-10">-->
+                            <!--<input type="text" class="form-control" id="inputWarning">-->
+                            <!--<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group has-error has-feedback">-->
+                        <!--<label class="col-sm-2 control-label" for="inputError">Input with error and glyphicon</label>-->
+                        <!--<div class="col-sm-10">-->
+                            <!--<input type="text" class="form-control" id="inputError">-->
+                            <!--<span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </form>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Your Website 2014</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>-->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
