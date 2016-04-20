@@ -71,102 +71,152 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <h1>Create Deployment</h1>
-                <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                        <label for="deployName" class="col-sm-2 control-label">Deployment Name : </label>
-                        <div class="col-sm-10">
-                            <input class="form-control" id="deployName" type="text" placeholder="Please input here...">
-                        </div>
-                    </div>
+    <div class="intro-body">
+          <div class="container">
+              <h1><br><br>Create Deployment</h1>
+              <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                      <label for="deployName" class="col-sm-2 control-label">Deployment Name : </label>
+                      <div class="col-sm-10">
+                          <input class="form-control" id="deployName" type="text" placeholder="Please input here...">
+                      </div>
+                  </div>
 
-                    <div class="form-group">
-                        <label for="url" class="col-sm-2 control-label">URL : </label>
-                        <div class="col-sm-10">
-                            <input class="form-control" id="url" type="text" placeholder="http:// ..." disabled>
-                        </div>
-                    </div>
+                  <div class="form-group">
+                      <label for="url" class="col-sm-2 control-label">URL : </label>
+                      <div class="col-sm-10">
+                          <input class="form-control" id="url" type="text" placeholder="http:// ..." disabled>
+                      </div>
+                  </div>
 
-                    <fieldset>
-                        <div class="form-group">
-                            <label for="typeDeploy" class="col-sm-2 control-label">Type of Deployment :</label>
-                            <div class="col-sm-10" id="typeDeploy">
-                                <select id="select" class="form-control">
-                                        <option>Please select type of deployment...</option>
-                                        <option>Human</option>
-                                        <option>Water</option>
-                                        <option>Fire</option>
-                                </select>
-                            </div>
-                        </div>
-                    </fieldset>
+                  <div class="form-group">
+                      <label for="url" class="col-sm-2 control-label">Initial Hashtag(#) : </label>
+                      <div class="col-sm-10">
+                          <input class="form-control" id="hashtag" type="text" >
+                      </div>
+                  </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Description : </label>
-                        <div class="col-sm-10">
-                            <!--<input class="form-control" id="description" type="text" >-->
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
-                        </div>
-                    </div>
+                  <fieldset>
+                      <div class="form-group">
+                          <label for="typeDeploy" class="col-sm-2 control-label">Type of Deployment :</label>
+                          <div class="col-sm-10" id="typeDeploy">
+                              <select id="select" class="form-control">
+                                      <option>Please select type of deployment...</option>
+                                      <option>Human</option>
+                                      <option>Water</option>
+                                      <option>Fire</option>
+                              </select>
+                          </div>
+                      </div>
+                  </fieldset>
 
-                    <!--<label class="col-sm-2 control-label">Configuration :</label>-->
-                    <div class="form-group">
-                        <label for="area" class="col-sm-2 control-label">Area of deployment : </label>
-                        <div class="col-sm-10">
-                            <input class="form-control" id="area" type="text">
-                        </div>
-                    </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Description : </label>
+                      <div class="col-sm-10">
+                          <!--<input class="form-control" id="description" type="text" >-->
+                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                  </div>
 
-                    Map Section
-                    <!--<div id="map"></div>-->
+                  <!--<label class="col-sm-2 control-label">Configuration :</label>-->
+                  <div class="form-group">
+                      <label for="area" class="col-sm-2 control-label">Area of deployment : </label>
+                      <div class="col-sm-10">
+                          <input class="form-control" id="area" type="text">
+                      </div>
+                      <br><br><br> <!--เว้นบรรทัดแผนที่ ไปแก้ที่ grayscale.js ดู margin-top-->
+                      <div id="map"></div>
+                  </div>
+
+                  <!--Map Section-->
+                  <!--<div id="map"></div>-->
 
 
-                    <div class="form-group">
-                        <label for="area" class="col-sm-2 control-label">Static data layer : </label>
-                        <div class="col-sm-10">
-                            <form role="form">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">hospital</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">school</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">police station</label>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!--<div class="form-group has-success has-feedback">-->
-                        <!--<label class="col-sm-2 control-label" for="inputSuccess">Input with success and glyphicon</label>-->
-                        <!--<div class="col-sm-10">-->
-                            <!--<input type="text" class="form-control" id="inputSuccess">-->
-                            <!--<span class="glyphicon glyphicon-ok form-control-feedback"></span>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="form-group has-warning has-feedback">-->
-                        <!--<label class="col-sm-2 control-label" for="inputWarning">Input with warning and glyphicon</label>-->
-                        <!--<div class="col-sm-10">-->
-                            <!--<input type="text" class="form-control" id="inputWarning">-->
-                            <!--<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="form-group has-error has-feedback">-->
-                        <!--<label class="col-sm-2 control-label" for="inputError">Input with error and glyphicon</label>-->
-                        <!--<div class="col-sm-10">-->
-                            <!--<input type="text" class="form-control" id="inputError">-->
-                            <!--<span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                </form>
-            </div>
+                  <div class="form-group">
+                      <label for="area" class="col-sm-2 control-label">Static data layer : </label>
+                      <div class="col-sm-10">
+                          <form role="form">
+                              <div>
+                                  <div class="checkbox">
+                                      <label><input type="checkbox" value="">hospital</label>
+                                  </div>
+                                  <div class="checkbox">
+                                      <label><input type="checkbox" value="">school</label>
+                                  </div>
+                                  <div class="checkbox">
+                                      <label><input type="checkbox" value="">police station</label>
+                                  </div>
+                              </div>
+                              <!--<div>-->
+                                  <!--<div class="checkbox">-->
+                                      <!--<label><input type="checkbox" value="">hospital</label>-->
+                                  <!--</div>-->
+                                  <!--<div class="checkbox">-->
+                                      <!--<label><input type="checkbox" value="">school</label>-->
+                                  <!--</div>-->
+                                  <!--<div class="checkbox">-->
+                                      <!--<label><input type="checkbox" value="">police station</label>-->
+                                  <!--</div>-->
+                              <!--</div>-->
+                          </form>
+                      </div>
+                  </div>
 
-        </div>
-    </header>
+                  <div class="form-group">
+                      <label for="area" class="col-sm-2 control-label">Dynamic data layer : </label>
+                      <div class="col-sm-10">
+                          <form role="form">
+                              <div>
+                                  <div class="checkbox">
+                                      <label><input type="checkbox" value="">Twitter</label>
+                                  </div>
+                                  <div class="checkbox">
+                                      <label><input type="checkbox" value="" disabled>Instagram</label>
+                                  </div>
+                                  <div class="checkbox">
+                                      <label><input type="checkbox" value="" disabled>Facebook</label>
+                                  </div>
+                              </div>
+                              <!--<div>-->
+                              <!--<div class="checkbox">-->
+                              <!--<label><input type="checkbox" value="">hospital</label>-->
+                              <!--</div>-->
+                              <!--<div class="checkbox">-->
+                              <!--<label><input type="checkbox" value="">school</label>-->
+                              <!--</div>-->
+                              <!--<div class="checkbox">-->
+                              <!--<label><input type="checkbox" value="">police station</label>-->
+                              <!--</div>-->
+                              <!--</div>-->
+                          </form>
+                      </div>
+                  </div>
+
+                  <!--<div class="form-group has-success has-feedback">-->
+                      <!--<label class="col-sm-2 control-label" for="inputSuccess">Input with success and glyphicon</label>-->
+                      <!--<div class="col-sm-10">-->
+                          <!--<input type="text" class="form-control" id="inputSuccess">-->
+                          <!--<span class="glyphicon glyphicon-ok form-control-feedback"></span>-->
+                      <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="form-group has-warning has-feedback">-->
+                      <!--<label class="col-sm-2 control-label" for="inputWarning">Input with warning and glyphicon</label>-->
+                      <!--<div class="col-sm-10">-->
+                          <!--<input type="text" class="form-control" id="inputWarning">-->
+                          <!--<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>-->
+                      <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="form-group has-error has-feedback">-->
+                      <!--<label class="col-sm-2 control-label" for="inputError">Input with error and glyphicon</label>-->
+                      <!--<div class="col-sm-10">-->
+                          <!--<input type="text" class="form-control" id="inputError">-->
+                          <!--<span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              </form>
+          </div>
+
+      </div>
 
     <!-- Footer -->
     <footer>
