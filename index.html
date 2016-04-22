@@ -96,7 +96,10 @@
                 <h2>About Grayscale</h2>
                 <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
                 <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p><br>
+                <a href="#download" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -108,7 +111,10 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Download Grayscale</h2>
                     <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a><br>
+                    <a href="#contact" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -132,7 +138,11 @@
                     <li>
                         <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                     </li>
-                </ul>
+                </ul><br>
+                <a href="#about" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-up animated"></i>
+                </a>
+            </div>
             </div>
         </div>
     </section>
@@ -144,7 +154,8 @@
             <div class="modal-content">
                 <div class="text-center" style="padding:50px 30px 50px 30px;color: #333333">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h1>Log in</h1>
                     </div>
                     <!-- Main Form -->
@@ -161,10 +172,10 @@
                                         <label for="lg_password" class="sr-only">Password</label>
                                         <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
                                     </div>
-                                    <div class="form-group login-group-checkbox">
-                                        <input type="checkbox" id="lg_remember" name="lg_remember">
-                                        <label for="lg_remember">remember</label>
-                                    </div>
+                                    <!--<div class="form-group login-group-checkbox">-->
+                                        <!--<input type="checkbox" id="lg_remember" name="lg_remember">-->
+                                        <!--<label for="lg_remember">remember</label>-->
+                                    <!--</div>-->
                                 </div>
                                 <input type="submit" class="btn btn-default btn-block" value="Submit">
                                 <!--<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>-->
@@ -190,7 +201,7 @@
                     <!-- FORGOT PASSWORD FORM -->
                     <div class="text-center">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h1>forgot password</h1>
                         </div>
                         <!-- Main Form -->
@@ -231,7 +242,7 @@
                     <!--REGISTRATION FORM -->
                     <div class="text-center">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h1>register</h1>
                         </div>
                         <!-- Main Form -->
@@ -254,22 +265,21 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="reg_email" class="sr-only">Email</label>
-                                            <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+                                            <label for="reg_firstname" class="sr-only">First Name</label>
+                                            <input type="text" class="form-control" id="reg_firstname" name="reg_firstname" placeholder="first name">
                                         </div>
                                         <div class="form-group">
-                                            <label for="reg_fullname" class="sr-only">Full Name</label>
-                                            <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+                                            <label for="reg_lastname" class="sr-only">Last Name</label>
+                                            <input type="text" class="form-control" id="reg_lastname" name="reg_lastname" placeholder="last name">
                                         </div>
-
-                                        <div class="form-group login-group-checkbox">
-                                            <input type="radio" class="" name="reg_gender" id="male" placeholder="username">
-                                            <label for="male">male</label>
-
-                                            <input type="radio" class="" name="reg_gender" id="female" placeholder="username">
-                                            <label for="female">female</label>
+                                        <div class="form-group">
+                                            <label for="reg_email" class="sr-only">Email</label>
+                                            <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="e-mail">
                                         </div>
-
+                                        <div class="form-group">
+                                            <label for="reg_tel" class="sr-only">Email</label>
+                                            <input type="text" class="form-control" id="reg_tel" name="reg_tel" placeholder="tel.">
+                                        </div>
                                         <div class="form-group login-group-checkbox">
                                             <input type="checkbox" class="" id="reg_agree" name="reg_agree" disabled>
                                             <label for="reg_agree">i agree with <a href="#">terms</a></label>
