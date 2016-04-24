@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Create Deployment</title>
+    <title>Deployment</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,10 +43,12 @@
         padding: 0;
       }
       #controller {
-        height: 843px;
-        margin-top: 112px;
-        padding: 0;
-        background-color: grey;
+          height: 843px;
+          margin-top: 112px;
+          padding: 0;
+          background-color: #f0f0f0;
+          padding: 30px 20px 30px 20px;
+          color: #333333;
       }
     </style>
 
@@ -61,7 +63,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" href="index.html">
                     <i class="fa fa-play-circle"></i> GCaaS
                 </a>
             </div>
@@ -72,15 +74,6 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Features</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
                         <a class="btn btn-default btn-lg" style="font-size:14px;" href="login.html">Log in</a><br>
@@ -100,7 +93,22 @@
         <div id="map"></div>
     </div>
     <div class="col-md-4">
-        <div id="controller"></div>
+        <div id="controller">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="search" class="col-sm-3 control-label">Search : </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="search" placeholder="Search location...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="search-btn"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
     
 

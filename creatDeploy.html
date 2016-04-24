@@ -41,7 +41,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" href="index.html">
                     <i class="fa fa-play-circle"></i> GCaaS
                 </a>
             </div>
@@ -50,18 +50,6 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Features</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
                     <li>
                         <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#login" style="font-size:14px;">Log in</button><br>
                     </li>
@@ -84,14 +72,17 @@
                   </div>
 
                   <div class="form-group">
-                      <label for="url" class="col-sm-2 control-label">URL : </label>
+                      <label for="url" class="col-sm-2 control-label">Deployment URL : </label>
                       <div class="col-sm-10">
-                          <input class="form-control" id="url" type="text" placeholder="http:// ..." disabled>
+                          <div class="input-group">
+                              <span class="input-group-addon">https://GCaaS.com/</span>
+                              <input type="text" class="form-control" id="url" aria-describedby="basic-addon3">
+                          </div>
                       </div>
                   </div>
 
                   <div class="form-group">
-                      <label for="url" class="col-sm-2 control-label">Initial Hashtag (#) : </label>
+                      <label for="hashtag" class="col-sm-2 control-label">Initial Hashtag (#) : </label>
                       <div class="col-sm-10">
                           <input class="form-control" id="hashtag" type="text" >
                       </div>
@@ -101,7 +92,7 @@
                       <div class="form-group">
                           <label for="typeDeploy" class="col-sm-2 control-label">Type of Deployment :</label>
                           <div class="col-sm-10" id="typeDeploy">
-                              <select id="select" class="form-control">
+                              <select id="select" class="form-control" >
                                       <option>Please select type of deployment...</option>
                                       <option>Human</option>
                                       <option>Water</option>
@@ -147,6 +138,9 @@
                                   <div class="checkbox">
                                       <label><input type="checkbox" value="">police station</label>
                                   </div>
+                                  <div class="checkbox">
+                                      <label><input type="checkbox" value="">fire station</label>
+                                  </div>
                               </div>
                               <!--<div>-->
                                   <!--<div class="checkbox">-->
@@ -169,7 +163,7 @@
                           <form role="form">
                               <div>
                                   <div class="checkbox">
-                                      <label><input type="checkbox" value="">Socail Network</label>
+                                      <label><input type="checkbox" value="">Social Network</label>
                                   </div>
                                   <div class="checkbox">
                                       <label><input type="checkbox" value="" disabled>Native App</label>
@@ -197,7 +191,159 @@
               </form>
           </div>
 
-      </div>
+    </div>
+
+    <!-- Modal Login form-->
+    <div class="modal fade" id="login" tabindex="-1" data-focus-on="input:first" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="text-center" style="padding:50px 30px 50px 30px;color: #333333">
+                    <div class="modal-header">
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h1>Log in</h1>
+                    </div>
+                    <!-- Main Form -->
+                    <div class="modal-body login-form-1">
+                        <form id="login-form" class="text-left">
+                            <div class="login-form-main-message"></div>
+                            <div class="main-login-form">
+                                <div class="login-group">
+                                    <div class="form-group">
+                                        <label for="lg_username" class="sr-only">Username</label>
+                                        <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lg_password" class="sr-only">Password</label>
+                                        <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+                                    </div>
+                                    <!--<div class="form-group login-group-checkbox">-->
+                                    <!--<input type="checkbox" id="lg_remember" name="lg_remember">-->
+                                    <!--<label for="lg_remember">remember</label>-->
+                                    <!--</div>-->
+                                </div>
+                                <input type="submit" class="btn btn-default btn-block" value="Submit">
+                                <!--<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>-->
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a data-toggle="modal" href="#forgot"><br>forgot your password?</a>
+                        <a data-toggle="modal" href="#register"><br>create new account.</a>
+                    </div>
+                    <!-- end:Main Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Forgot form-->
+    <div class="modal fade" id="forgot" tabindex="-1" data-focus-on="input:first" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="text-center" style="padding:50px 30px 50px 30px;color: #333333">
+                    <!-- FORGOT PASSWORD FORM -->
+                    <div class="text-center">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1>forgot password</h1>
+                        </div>
+                        <!-- Main Form -->
+                        <div class="modal-body login-form-1">
+                            <form id="forgot-password-form" class="text-left">
+                                <div class="etc-login-form">
+                                    <p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
+                                </div>
+                                <div class="login-form-main-message"></div>
+                                <div class="main-login-form">
+                                    <div class="login-group">
+                                        <div class="form-group">
+                                            <label for="fp_email" class="sr-only">Email address</label>
+                                            <input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-default btn-block" value="Submit">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <!--<p>already have an account? <a href="#">login here</a></p>-->
+                            <a data-toggle="modal" href="#register">create new account.</a>
+                        </div>
+                        <!-- end:Main Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Register form-->
+    <div class="modal fade" id="register" tabindex="-1" data-focus-on="input:first" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="text-center" style="padding:50px 30px 50px 30px;color: #333333">
+                    <!--REGISTRATION FORM -->
+                    <div class="text-center">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1>register</h1>
+                        </div>
+                        <!-- Main Form -->
+                        <div class="modal-body login-form-1">
+                            <form id="register-form" class="text-left">
+                                <div class="login-form-main-message"></div>
+                                <div class="main-login-form">
+                                    <div class="login-group">
+                                        <div class="form-group">
+                                            <label for="reg_username" class="sr-only">Email address</label>
+                                            <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reg_password" class="sr-only">Password</label>
+                                            <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+                                            <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="reg_firstname" class="sr-only">First Name</label>
+                                            <input type="text" class="form-control" id="reg_firstname" name="reg_firstname" placeholder="first name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reg_lastname" class="sr-only">Last Name</label>
+                                            <input type="text" class="form-control" id="reg_lastname" name="reg_lastname" placeholder="last name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reg_email" class="sr-only">Email</label>
+                                            <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="e-mail">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reg_tel" class="sr-only">Email</label>
+                                            <input type="text" class="form-control" id="reg_tel" name="reg_tel" placeholder="tel.">
+                                        </div>
+                                        <div class="form-group login-group-checkbox">
+                                            <input type="checkbox" class="" id="reg_agree" name="reg_agree" disabled>
+                                            <label for="reg_agree">i agree with <a href="#">terms</a></label>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-default btn-block" value="Submit">
+                                </div>
+                            </form>
+                        </div>
+                        <!--<div class="modal-footer">-->
+                        <!--<a data-toggle="modal" href="#login">already have an account? login here</a>-->
+                        <!--</div>-->
+                        <!-- end:Main Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <!--<footer>-->
