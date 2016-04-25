@@ -86,8 +86,48 @@
     </nav>
 
     <!-- Header -->
-    
 
+    <div id="bc_outer" class="border-container-outer">
+        <div id="cp_outer_left" class="content-pane-left">
+            <div id="drawer_menus"></div>
+        </div>
+        <div id="cp_outer_center" class="content-pane-center">
+            <div id="geoData"></div>
+            <div class="top-bar">
+                <div id="hamburger_button" class="hamburger-button toggle-grey">
+                    <div class="icon-menu-1"></div>
+                </div>
+                <div id="title" class="app-title"></div>
+                <div class="top-menu-right">
+                    <div id="ShareDialog"></div>
+                    <div class="locate-box">
+                        <div id="geocoderSearch"></div>
+                    </div>
+                    <div id="mobileGeocoderIcon" class="mobile-geocoder-icon icon-right">
+                        <div id="mobileGeocoderIconContainer" class="button-container toggle-grey icon-search-1"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="mobileSearch" class="mobile-locate-box-hidden">
+                <div class="mobile-search-container">
+                    <div id="geocoderMobile"></div>
+                    <div id="btnCloseGeocoder" class="close-geocoder-button">Cancel</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="mapButtons" class="map-buttons">
+                <div id="LocateButton"></div>
+                <div id="HomeButton"></div>
+            </div>
+            <div id="BasemapToggle"></div>
+            <div id="mapDiv" dir="ltr">
+                <div id="swipeDiv"></div>
+            </div>
+            <div id="printButton"></div>
+        </div>
+    </div>
     <!-- Body -->
     <div class="col-md-8">
         <div id="map"></div>
