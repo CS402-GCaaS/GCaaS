@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce5138a4-38a6-4afb-a6b7-5c67d20455fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/creatDeploy.html" afterPath="$PROJECT_DIR$/creatDeploy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mapt.html" afterPath="$PROJECT_DIR$/mapt.html" />
-    </list>
+    <list default="true" id="ce5138a4-38a6-4afb-a6b7-5c67d20455fe" name="Default" comment="" />
     <ignored path="GCaaS.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
