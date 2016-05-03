@@ -44,7 +44,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="index.html">
-                <i class="fa fa-play-circle"></i> GCaaS
+                GCaaS
             </a>
         </div>
 
@@ -99,9 +99,11 @@
                     <div class="col-sm-10" id="typeDeploy">
                         <select id="select" class="form-control">
                             <option>Please select type of deployment...</option>
-                            <option>Human</option>
-                            <option>Water</option>
-                            <option>Fire</option>
+                            <option>Volcano Eruptions</option>
+                            <option>Floods</option>
+                            <option>Fires</option>
+                            <option>Earthquakes</option>
+                            <option>Tsunamis</option>
                         </select>
                     </div>
                 </div>
@@ -137,21 +139,29 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#layer" href="#static-list">Static data layer</a>
+                                        <a data-toggle="collapse" data-parent="#layer" href="#static-list">Static data
+                                            layer</a>
                                     </h4>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#layer" href="#collapse2">Dynamic data layer</a>
+                                        <a data-toggle="collapse" data-parent="#layer" href="#collapse2">Dynamic data
+                                            layer</a>
                                     </h4>
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <button type="button" id="dynamic-social" class="btn btn-default btn-block" data-toggle="collapse" data-target="#social-list">Social Network</button>
-                                        <button type="button" id="dynamic-native" class="btn btn-default btn-block" data-toggle="collapse" data-target="#native" disabled>Native App</button>
-                                        <button type="button" id="hardware" class="btn btn-default btn-block" data-toggle="collapse" data-target="#hardware" disabled>Hardware</button>
+                                        <button type="button" id="dynamic-social" class="btn btn-default btn-block"
+                                                data-toggle="collapse" data-target="#social-list">Social Network
+                                        </button>
+                                        <button type="button" id="dynamic-native" class="btn btn-default btn-block"
+                                                data-toggle="collapse" data-target="#native" disabled>Native App
+                                        </button>
+                                        <button type="button" id="hardware" class="btn btn-default btn-block"
+                                                data-toggle="collapse" data-target="#hardware" disabled>Hardware
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -175,6 +185,9 @@
                                     <div class="checkbox">
                                         <label><input type="checkbox" value="">Fire station</label>
                                     </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="">Temple</label>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -185,39 +198,71 @@
                             <form role="form">
                                 <div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="" data-toggle="collapse" data-target="#twitter-list">Twitter</label>
+                                        <label><input type="checkbox" value="" data-toggle="collapse"
+                                                      data-target="#twitter-list">Twitter</label>
                                     </div>
                                     <div class="panel-collapse collapse" id="twitter-list" style="margin-left: 10px">
-                                        <form role="form" >
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optradio">Basic
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optradio">Customize
-                                            </label>
-                                        </form>
+                                        <ul>
+                                            <form role="form">
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="optradio" id="basic" value="Twitter-basic"
+                                                           onclick="cusToBasic()" checked>Basic
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="optradio" id="customize"
+                                                           value="Twitter-customize" onclick="basicToCus()">Customize
+                                                </label>
+                                            </form>
+                                        </ul>
+                                        <ul style="margin-left: 20px">
+                                            <form role="form">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="selected" id="item1"
+                                                                   value="item1"
+                                                                   checked
+                                                                   disabled>Name of User
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="selected" id="item2"
+                                                                   value="item2"
+                                                                   checked
+                                                                   disabled>item 2
+                                                        </label>
 
-                                        <form role="form">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value="">item 1
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value="">item 2
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value="">item 3
-                                            </label>
-                                            <br>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value="">item 4
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value="">item 5
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value="">item 6
-                                            </label>
-                                        </form>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="selected" id="item3"
+                                                                   value="item3"
+                                                                   checked
+                                                                   disabled>item 3
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="selected" id="item4"
+                                                                   value="item4"
+                                                                   checked
+                                                                   disabled>item 4
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="selected" id="item5"
+                                                                   value="item5"
+                                                                   checked
+                                                                   disabled>item 5
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="selected" id="item6"
+                                                                   value="item6"
+                                                                   checked
+                                                                   disabled>item 6
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </ul>
                                     </div>
                                     <div class="checkbox">
                                         <label><input type="checkbox" value="" disabled>Facebook</label>
@@ -388,7 +433,7 @@
                                         <label for="reg_agree">i agree with <a href="#">terms</a></label>
                                     </div>
                                 </div>
-                                <input type="submit" class="btn btn-default btn-block" value="Submit">
+                                <a href="test.html" ><input type="submit" class="btn btn-default btn-block" value="Submit"> </a>
                             </div>
                         </form>
                     </div>
@@ -403,11 +448,11 @@
 </div>
 
 <!-- Footer -->
-<!--<footer>-->
-<!--<div class="container text-center">-->
-<!--<p>Copyright &copy; Your Website 2014</p>-->
-<!--</div>-->
-<!--</footer>-->
+<footer>
+    <div class="container text-center">
+        <!--<p>Copyright &copy; Your Website 2014</p>-->
+    </div>
+</footer>
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
